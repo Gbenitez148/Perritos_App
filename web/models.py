@@ -14,7 +14,7 @@ class Carrousel(models.Model):
     #CAMPO = models.FileField(BUSCAR PARAMETROS)
     #Que datos debe tener carrousel?
     foto = models.ImageField(upload_to="Media") 
-    titulo = models.CharField(max_length=64, null=False, default="sin titulo")
+    titulo = models.CharField(max_length=64, default="sin titulo")
     texto = models.CharField(max_length=128, null=True)
     pie_de_pagina = models.CharField(max_length=128, null=True)
     habilitado = models.BooleanField()
@@ -23,3 +23,14 @@ class Carrousel(models.Model):
 
     def __str__(self):
         return self.titulo
+
+class Perro(models.Model):
+    nombre = models.CharField(max_length=64)
+    raza = models.CharField(max_length=64)
+    fh_nacimiento = models.DateTimeField()
+    valor_venta = models.IntegerField(null=True)
+    #posibles campos
+    #dias #Esto se puede hacer con una funcion, que lo calcule automaticamente
+    
+    def __str__(self):
+        return self.nombre

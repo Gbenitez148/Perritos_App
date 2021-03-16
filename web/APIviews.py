@@ -1,6 +1,7 @@
 from rest_framework import viewsets
-from .models import Carrousel
-from .serializers import CarrouselSerializer
+from rest_framework.generics import ListAPIView
+from .models import *
+from .serializers import *
 
 
 class CarrouselModelViewSet(viewsets.ModelViewSet):
@@ -13,3 +14,13 @@ class CarrouselModelViewSet(viewsets.ModelViewSet):
     serializer_class = CarrouselSerializer
     http_method_names = ['get'] #lo limitamos a que solo pueda usar get
     #permission_classes = (IsAuthenticated,)
+
+
+class PerroAPIView(ListAPIView):
+	"""
+    retrieve:
+        Se proporciona toda la info correspondiente a los perros
+    """
+
+	queryset = Perro.objects.all()
+	serializer_class = PerroSerializer

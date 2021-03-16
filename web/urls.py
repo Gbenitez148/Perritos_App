@@ -10,4 +10,6 @@ app_name = "web"
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'perros/$', PerroAPIView.as_view()),
+
 ]
