@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 from .models import *
 from .serializers import *
 
@@ -24,3 +24,12 @@ class PerroAPIView(ListAPIView):
 
 	queryset = Perro.objects.all()
 	serializer_class = PerroSerializer
+
+class ContactoAPIView(RetrieveAPIView):
+    """
+    retrieve:
+        Se proporciona toda la info correspondiente al contacto
+    """
+
+    queryset = Contacto.objects.all()
+    serializer_class = ContactoSerializer
