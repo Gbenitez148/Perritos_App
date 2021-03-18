@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'perros/$', PerroAPIView.as_view()),
     url(r'contacto/(?P<pk>\d+)/$', ContactoAPIView.as_view()),
+    url(r'entrega/(?P<pk>\d+)/$', EntregaAPIView.as_view()),
 ]
