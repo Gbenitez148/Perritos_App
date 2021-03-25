@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
+    "react-elastic-carousel": "^0.11.1"
+  }
+}
