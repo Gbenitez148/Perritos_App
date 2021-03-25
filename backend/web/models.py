@@ -14,7 +14,7 @@ class Carrousel(models.Model):
     #  CAMPO = models.DateTimeField(null=True)
     #  CAMPO = models.FileField(BUSCAR PARAMETROS)
     #  Que datos debe tener carrousel?
-    foto = models.ImageField(upload_to="Media") 
+    foto = models.ImageField(upload_to="media") 
     titulo = models.CharField(max_length=64, default="sin titulo")
     texto = models.CharField(max_length=128, null=True)
     pie_de_pagina = models.CharField(max_length=128, null=True)
